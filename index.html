@@ -4,7 +4,7 @@
     <script>
       function validateForm() {
   var x = document.forms["form"]["password"].value;
-  if (x == qwerty) {
+  if (x == "qwerty") {
 document.getElementById("demo").innerHTML = "My First JavaScript";
   }
 }
@@ -14,7 +14,8 @@ document.getElementById("demo").innerHTML = "My First JavaScript";
     <form name="form" action="/index.html" onsubmit="return validateForm()" method="post">
       <input type="text" name="password">
         <input type="submit" value="Submit">
-      <p id="demo">hola</p>
+ 
     </form>
+         <p id="demo">hola</p>
   </body>
 </html>
