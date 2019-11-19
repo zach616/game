@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-<script>
-function myFunction() {
-  document.getElementById("demo").innerHTML = "Paragraph changed.";
+  <head>
+    <script>
+      function validateForm() {
+  var x = document.forms["form"]["password"].value;
+  if (x == qwerty) {
+<meta http-equiv="refresh" content="0; URL='http://new-website.com'" />
+  }
 }
-</script>
-
-</head>
-<body>
-
-<h1>A Web Page</h1>
-<p id="demo">A Paragraph</p>
-<button type="button" onclick="myFunction()">Try it</button>
-
-</body>
+    </script>
+  </head>
+  <body>
+    <form name="form" action="/index.html" onsubmit="return validateForm()" method="post">
+      <input type="text" name="password">
+        <input type="submit" value="Submit">
+    </form>
+  </body>
 </html>
