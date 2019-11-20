@@ -1,24 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script>
-      function validateForm() {
-  var x = document.forms["form"]["password"].value;
-  if (x == "qwerty") {
-document.getElementById('demo').innerHTML = "okay"
-";
 
-
-  }
-}
-    </script>
   </head>
   <body>
-    <form name="form" action = "index.html" onsubmit="return validateForm()" method="post">
+    <form name="form" action = "javascript/index.js" onsubmit="return validateForm()" method="post">
       <input type="text" name="password">
         <input type="submit" value="Submit">
  
     </form>
-         <p id="demo">Hi</p>
+         <p id="demo">hi</p>
   </body>
 </html>
