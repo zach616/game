@@ -11,5 +11,5 @@ document.getElementById('demo').innerHTML = "okay"
     </script>
 
 <script>
-window.location = "http://new-website.com";
+window.location = "wevjidsnavwojdjsviwonoaephfioaw-8djsaklbva";
 </script>
