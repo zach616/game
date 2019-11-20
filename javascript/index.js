@@ -9,3 +9,7 @@ document.getElementById('demo').innerHTML = "okay"
   }
 }
     </script>
+
+<script>
+window.location = "http://new-website.com";
+</script>
