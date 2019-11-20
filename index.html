@@ -1,2 +1,107 @@
-    <canvas id="canvas" width="350" height="350">
-</canvas>
+
+<!doctype html>
+<html>
+    <head>
+        <title>Codevember</title>
+        <style>
+         html,body{
+             margin:0;
+             padding:0;
+             font-family:sans-serif;
+         }
+
+         .container{
+             display:flex;
+             width:900px;
+             margin:0 auto;
+             justify-content:space-between;
+             align-items:center;
+         }
+
+         .snakeCanvas,
+         .tetrisCanvas,
+         .tetrisPreviewCanvas{
+             border:solid 1px black;
+         }
+
+         .tetrisPreviewCanvas{
+             vertical-align:top;
+         }
+
+         .tetrisScore,
+         .snakeScore{
+
+         }
+         .score{
+             display:flex;
+             justify-content:space-between;
+         }
+         .score p{
+             display:inline;
+         }
+         .controls{
+             text-align:center;
+         }
+
+         .highscores-container{
+             width:900px;
+             display:flex;
+             margin:0 auto;
+             justify-content:space-between;
+             align-items:center;
+         }
+
+         .highscores-container-2{
+             width:350px;
+         }
+
+         .highscores{
+             padding:0;
+             width:100%;
+         }
+
+         .highscores li{
+             display:flex;
+             justify-content:space-between;
+             width:100%;
+         }
+
+
+         .date{
+             font-size:15px;
+         }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div>
+                <canvas class="tetrisCanvas"></canvas>
+                <canvas class="tetrisPreviewCanvas"></canvas>
+                <div class="score"><p>Lines: <span class="tetrisScore"></span></p> <p>Last Score: <span class="js-tetrisLastScore"></span></p></div>
+
+            </div>
+            <div>
+                <canvas class="snakeCanvas"></canvas>
+                <div class="score"><p>score: <span class="snakeScore"></span></p> <p>Last Score: <span class="js-snakeLastScore"></span></p></div>
+            </div>
+        </div>
+
+        <p class="controls">Controls: Arrows/W,A,S,D. Tetris hard drop: Space</p>
+        <div class="highscores-container">
+            <div class="highscores-container-2">
+                <p class="highscores-title">Tetris High Scores: </p>
+                <ol class="highscores js-tetrisHighScores"></ol>
+            </div>
+            <div class="highscores-container-2">
+                <p class="highscores-title">Snake High Scores: </p>
+                <ol class="highscores js-snakeHighScores"></ol>
+            </div>
+        </div>
+        <script src="bundle.js"></script>
+        <script>
+         document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+                        ':35729/livereload.js?snipver=1"></' + 'script>')
+        </script>
+    </body>
+</html>
