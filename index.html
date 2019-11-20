@@ -1,14 +1,33 @@
-<!DOCTYPE html>
-<html>
-  <head>
+ <div class="wrapper">
+        <form method="POST" class="form1" onsubmit="return checkPassword();  return false;">
+            <div class="formtitle">
+                Enter the password to proceed
+            </div>
 
-  </head>
-  <body>
-    <form name="form" action = "javascript/index.js" onsubmit="return validateForm()" method="post">
-      <input type="text" name="password">
-        <input type="submit" value="Submit">
- 
-    </form>
-         <p id="demo">hi</p>
-  </body>
-</html>
+            <div class="input nobottomborder">
+                <div class="inputtext">
+                    Password:
+                </div>
+
+                <div class="inputcontent">
+                    <input type="password" id="password" /><br />
+                </div>
+            </div>
+
+            <div class="buttons">
+                <input class="orangebutton" type="submit" value="Login"  />
+            </div>
+        </form>
+    </div>
+
+   <script>
+  function checkPassword(){
+   if(document.getElementById('password').value == 'hello'){
+    alert('Correct Password!'); 
+    location.href="http://google.com";
+     } else {
+     alert('Wrong Password!');
+      return false;
+    }
+   }
+  </script>
